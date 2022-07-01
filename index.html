@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="top">
+        <h1>Nationality predictor</h1>
+        <div class="line">
+            <input type="text" id="myText" placeholder="type a name">
+            <button type="button" onClick=" getRepositories();" class="submit-button">Find</button>
+        </div>
+        <button onClick="window.location.reload();" class="refresh-button"><img src="images/refresh.png" width="30px" height="30px"></button>
+    </div>
+
+    <div class="id" id="id-api"></div>
+    <div class="probab" id="probab-api"></div>
+
+</body>
+
+<script>
+    function getRepositories() {
+
+        var x = document.getElementById("myText").value;
+        fetch(`https://api.nationalize.io/?name=${x}`)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                const country = data.country;
+
+
+                let newName = document.createElement('div');
+                newName.classList.add('name');
+
+                let id = document.createElement("div");
+                id.innerHTML = country[0].country_id;
+
+                newName.appendChild(id);
+
+                let newProbab = document.createElement('div');
+                newProbab.classList.add('probab');
+
+                let probab = document.createElement("div");
+                probab.innerHTML = country[0].probability;
+
+                newProbab.appendChild(probab);
+
+                document.getElementById('id-api').append(newName, newProbab);
+
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+
+    }
+
+</script>
+
+</html>

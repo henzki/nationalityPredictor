@@ -1,0 +1,71 @@
+html {
+    margin: 0;
+    background: rgb(138, 208, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 27px;
+}
+
+h1 {
+    background: rgb(0, 120, 204);
+    background: -webkit-linear-gradient(0deg, rgba(0, 120, 204, 1) 0%, rgba(45, 91, 147, 1) 43%, rgba(39, 39, 85, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.line {
+    margin: auto;
+    width: 90%;
+}
+
+.refresh-button {
+    display: block;
+    margin-top: 20px;
+    padding: 5px;
+    border: 0;
+    outline: 0;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(0, 120, 204);
+    background: linear-gradient(0deg, rgba(0, 120, 204, 1) 0%, rgba(45, 91, 147, 1) 43%, rgba(39, 39, 85, 1) 100%);
+}
+
+input[type="text"] {
+    color: white;
+    background-color: rgba(45, 91, 147, 1);
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+}
+
+::placeholder {
+    color: white;
+}
+
+.submit-button {
+    margin-left: 5px;
+    background-color: rgba(45, 91, 147, 1);
+    color: white;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+}
+
+.id {
+    background: rgb(0, 120, 204);
+    background: -webkit-linear-gradient(0deg, rgba(0, 120, 204, 1) 0%, rgba(45, 91, 147, 1) 43%, rgba(39, 39, 85, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    font-weight: 200;
+    margin-top: 20px;
+    text-align: center;
+}
